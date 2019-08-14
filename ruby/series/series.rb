@@ -25,15 +25,8 @@ class Series
   # Given a string of digits,
   # output all the contiguous substrings of length n in that string
   def slices(length)
-    string = digits.to_s
-    str_length = string.length
-    raise ArgumentError if length > str_length
+    raise ArgumentError if length > digits.length
 
-    ary = []
-    0.upto(str_length - length) do |char|
-      ary << string[char...char + length]
-    end
-
-    ary
+    digits.chars.each_cons(length).flat_map(&:join)
   end
 end
