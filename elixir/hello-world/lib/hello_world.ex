@@ -1,9 +1,9 @@
 defmodule HelloWorld do
-  @doc """
+  @moduledoc """
   Simply returns "Hello, World!"
   """
   @spec hello :: String.t()
   def hello do
-    "Your implementation goes here"
+    "Hello, World!"
   end
 end

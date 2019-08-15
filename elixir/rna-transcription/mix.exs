@@ -1,9 +1,9 @@
-defmodule HelloWorld.MixProject do
+defmodule RnaTranscription.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :hello_world,
+      app: :rna_transcription,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
