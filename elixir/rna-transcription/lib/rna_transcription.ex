@@ -9,9 +9,12 @@ defmodule RnaTranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    complement = %{71 => 67, 67 => 71, 84 => 65, 65 => 85}
+    complement = %{"G" => "C", "C" => "G", "T" => "A", "A" => "U"}
 
     dna
+    |> List.to_string()
+    |> String.codepoints()
     |> Enum.map(&Map.fetch!(complement, &1))
+    |> List.to_charlist()
   end
 end
